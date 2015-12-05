@@ -151,16 +151,16 @@
 
 	insteadOf = "gist:"
 [user]
-	name = Jessica Frazelle
-	email = acidburn@docker.com
-	signingkey = 0x18F3685C0022BFF3
+	name = Matthew L Shields
+	email = geek@shields.cc
+	signingkey = 0x8BA1F257C2C541A4
 #[remote "origin"]
 	#fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
 [github]
-	user = jfrazelle
+	user = matthewlshields
 #[init]
 #	templatedir = ~/.git_template/template
 [commit]
 	gpgsign = true
 [http]
-	cookiefile = /home/jessie/.gitcookies
+	cookiefile = /home/matthew/.gitcookies

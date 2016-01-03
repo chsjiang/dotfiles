@@ -161,6 +161,6 @@
 #[init]
 #	templatedir = ~/.git_template/template
 [commit]
-	gpgsign = true
+	gpgsign = false 
 [http]
 	cookiefile = /home/matthew/.gitcookies

@@ -98,6 +98,13 @@ install_sublimetext() {
 	ln -s /opt/sublime_text_3/sublime_text /usr/bin/subl
 }
 
+install_atom() {
+	wget https://atom.io/download/rpm
+	sudo yum install -y atom.x86_64.rpm
+	pkcon install libXScrnSaver
+	apm install particle-dev-complete
+}
+
 get_dotfiles() {
 	# create subshell
 	(
@@ -126,6 +133,7 @@ usage() {
 	echo "  sources                     - setup sources & install base pkgs"
 	echo "  dotfiles                    - get dotfiles"
 	echo "  sublime                     - install Sublime Text 3"
+	echo "  atom                        - install Atom Text Editor"
 }
 
 main() {
@@ -146,6 +154,8 @@ main() {
 		get_dotfiles
 	elif [[ $cmd == "sublime" ]]; then
 		install_sublimetext
+	elif [[ $cmd == "atom" ]]; then
+		install_atom
 	else
 		usage
 	fi

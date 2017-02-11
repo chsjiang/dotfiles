@@ -45,6 +45,7 @@ base() {
 		git \
 		gnupg \
 		grep \
+		guake \
 		gzip \
 		hostname \
 		indent \

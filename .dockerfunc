@@ -813,16 +813,7 @@ virtualbox(){
 		--privileged \
 		jess/virtualbox
 }
-visualstudio(){
-	del_stopped visualstudio
 
-	docker run -d \
-		-v /etc/localtime:/etc/localtime:ro \
-		-v /tmp/.X11-unix:/tmp/.X11-unix  \
-		-e DISPLAY=unix$DISPLAY \
-		--name visualstudio \
-		jess/visualstudio
-}
 vlc(){
 	del_stopped vlc
 	relies_on pulseaudio
@@ -840,6 +831,18 @@ vlc(){
 		--device /dev/dri \
 		--name vlc \
 		jess/vlc
+}
+
+vscode() {
+	del_stopped vscode
+
+	docker run -d \
+		-v /tmp/.X11-unix:/tmp/.X11-unix \
+		-v $HOME:/home/user \
+		-e DISPLAY=unix$DISPLAY \
+		--device /dev/dri \
+		--name vscode \
+		matthewlshields/vscode "$@"
 }
 watchman(){
 	del_stopped watchman

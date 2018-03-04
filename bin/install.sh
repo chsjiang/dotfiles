@@ -62,6 +62,7 @@ base() {
 		rxvt-unicode-256color \
 		s3cmd \
 		scdaemon \
+		ShellCheck \
 		ssh \
 		strace \
 		sudo \
